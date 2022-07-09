@@ -1,7 +1,7 @@
 # Sky
+Simple injection library example.
 
 ## Overview
-Simple injection library example.
 
 ### General
 
