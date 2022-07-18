@@ -9,22 +9,23 @@ import Foundation
 import InjectionLib
 
 public protocol ServiceProviding {
+    static var text: String {get}
     func requestData() -> String
 }
 
 public struct ServiceProvider: ServiceProviding {
-    static let text = "Service Data"
+    public static let text = "Service Data"
     
     public func requestData() -> String {
         return ServiceProvider.text
     }
 }
 
-public struct MockedServiceProvider: ServiceProviding {
-    static let text = "Mock Data"
+public struct MockServiceProvider: ServiceProviding {
+    public static let text = "Mock Data"
     
     public func requestData() -> String {
-        return MockedServiceProvider.text
+        return MockServiceProvider.text
     }
 }
 

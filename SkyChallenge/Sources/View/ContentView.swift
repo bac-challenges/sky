@@ -15,8 +15,7 @@ struct ContentView: View {
     var body: some View {
         Text(viewModel.text)
             .onAppear {
-                viewModel.loadData()
-                InjectedValues[\.serviceProvider] = MockedServiceProvider()
+                // Usage: InjectedValues[\.serviceProvider] = MockServiceProvider()
                 viewModel.loadData()
             }
     }
